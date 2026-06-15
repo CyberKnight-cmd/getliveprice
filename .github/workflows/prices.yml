@@ -2,10 +2,12 @@ name: Fetch Metal Prices
 
 on:
   schedule:
-    - cron: '15 4 * * *'   # 09:45 IST
-    - cron: '0 10 * * *'   # 15:30 IST
-    - cron: '0 15 * * *'   # 20:30 IST
+    - cron: '0 * * * *'    # every hour
   workflow_dispatch:        # allows manual trigger from GitHub UI
+
+concurrency:
+  group: fetch-prices
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -32,3 +34,4 @@ jobs:
           git add prices.json
           git diff --cached --quiet || git commit -m "chore: update prices"
           git push
+

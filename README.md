@@ -24,15 +24,7 @@ Response shape:
 
 ## Schedule
 
-Prices are auto-fetched at:
-
-| IST | UTC |
-|-----|-----|
-| 9:45 AM | 04:15 |
-| 3:30 PM | 10:00 |
-| 8:30 PM | 15:00 |
-
-You can also trigger a manual fetch anytime from the **Actions** tab → **Fetch Metal Prices** → **Run workflow**.
+Prices are auto-fetched every hour. You can also trigger a manual fetch anytime from the **Actions** tab → **Fetch Metal Prices** → **Run workflow**.
 
 ## Run the API locally
 
